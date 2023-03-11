@@ -2,11 +2,12 @@
   --plus: url("./pic/plus.png");
   --cross: url("./pic/cross.png");
   --bg: url("");
+  --size: 0%;
   
 }
 
 .main {
-  min-height: 80vh;
+  min-height: 91vh;
   width: 50vw;
   background-color: rgb(255, 242, 242);
   border: 0.2rem solid black;
@@ -42,8 +43,8 @@
 }
 
 .main_bayan_lines__mem {
-  display: flex;
-  height: 2rem;
+  /* display: flex; */
+  height: 3rem;
   flex-direction: column;
   justify-content: space-between;
   font-family: 'Courier New', Courier, monospace;
@@ -56,24 +57,28 @@
   background-size: 1.5rem;
   background-position: right top;
 
+  transition: width 0.5s, height 0.5s, background-color 1s, transform 0.5s;
 }
 
 .main_bayan_lines_pic {
-  width: 1%;
-  height: 1%;
-  /* display:none; */
+  width: var(--size);
+  height: var(--size);
+  margin: 0 auto;
 }
 
 .main_bayan:hover {
   --bg: var(--plus);
 }
 
-.main_bayan_lines__mem:hover + .main_bayan_lines_pic {
-  height: 100%;
-}
-
 .main_bayan_lines__mem:hover {
   background-image: var(--cross);
   height: 20rem;
-  background-color:rgb(255, 249, 239);
+  background-color:rgb(237, 234, 234);
+  --size: 90%; 
+}
+
+.main_bayan_lines__mem:active {
+  background-image: var(--cross);
+  height: 21rem;
+  background-color:rgb(237, 234, 234);
 }
