@@ -1,3 +1,10 @@
+:root {
+  --plus: url("./pic/plus.png");
+  --cross: url("./pic/cross.png");
+  --bg: url("");
+  
+}
+
 .main {
   min-height: 80vh;
   width: 50vw;
@@ -31,23 +38,20 @@
 }
 
 .main_bayan_lines {
-  /* display: flex; */
   width: 100%;
-
 }
 
 .main_bayan_lines__mem {
   display: flex;
-  /* width: 100%; */
-  flex-direction: row;
+  height: 2rem;
+  flex-direction: column;
   justify-content: space-between;
   font-family: 'Courier New', Courier, monospace;
   font-size: 1.5em;
   font-weight: 500;
   border: 1px solid green;
   border-radius: 0.4vw;
-
-  background-image: url('./pic/plus.png');
+  background-image: var(--bg);
   background-repeat: no-repeat;
   background-size: 1.5rem;
   background-position: right top;
@@ -55,12 +59,21 @@
 }
 
 .main_bayan_lines_pic {
-  width: 100%;
+  width: 1%;
+  height: 1%;
+  /* display:none; */
+}
+
+.main_bayan:hover {
+  --bg: var(--plus);
+}
+
+.main_bayan_lines__mem:hover + .main_bayan_lines_pic {
   height: 100%;
-  display:none;
 }
 
 .main_bayan_lines__mem:hover {
-  background-image: url('./pic/cross.png');
+  background-image: var(--cross);
   height: 20rem;
+  background-color:rgb(255, 249, 239);
 }
