@@ -65,7 +65,7 @@ html {
 
 .main_bayan_lines_pic {
   height: var(--size);
-  width: auto;
+  max-width: 90%;
   margin: 0 auto;
 }
 
