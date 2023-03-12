@@ -4,6 +4,7 @@
   --bg: url("");
   --size: 0%;
   --openedsize: 0%;
+  --sizeLineMem: 3rem;
 }
 
 html { 
@@ -50,7 +51,7 @@ html {
 
 .main_bayan_lines__mem {
   display: flex;
-  height: 3rem;
+  height: var(--sizeLineMem);
   flex-direction: column;
   justify-content: space-evenly;
   font-family: 'Courier New', Courier, monospace;
@@ -77,6 +78,10 @@ html {
   margin: 0 auto;
 }
 
+
+
+/* магия интерактива начинается тут */
+
 .main_bayan:hover {
   --bg: var(--plus);
 }
@@ -90,8 +95,8 @@ html {
 
 
 .main_bayan_lines__mem input:checked ~ .main_bayan_lines__mem {
-  background-image: var(--cross);
-  background-color: #2196F3;
+  /* background-image: var(--cross);
+  background-color: #2196F3; */
   height: 25rem;
   --size: 90%;
 }
