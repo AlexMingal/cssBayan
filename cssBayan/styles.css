@@ -1,21 +1,25 @@
 :root {
-  --plus: url("./pic/plus.png");
-  --cross: url("./pic/cross.png");
+  --plus: url("./pic/plus2.png");
+  --cross: url("./pic/close_111152.png");
   --bg: url("");
-  --size: 0%;  
+  --size: 0%;
+  --openedsize: 0%;
 }
 
 html { 
-  overflow:scroll;
+  overflow: overlay;
 }
 
 .main {
   min-height: 91vh;
   width: 50vw;
-  background-color: rgb(255, 242, 242);
-  border: 0.2rem solid black;
-  border-radius: 1vw;
+  cursor: pointer;
 
+  background: #EFEEFB;
+  background: -webkit-radial-gradient(center, #EFEEFB, #D4DCE7);
+  background: -moz-radial-gradient(center, #EFEEFB, #D4DCE7);
+  background: radial-gradient(ellipse at center, #EFEEFB, #D4DCE7);
+  border-radius: 1vw;
   margin: 0 auto;
   margin-top: 2em;
   display: flex;
@@ -58,9 +62,13 @@ html {
   background-image: var(--bg);
   background-repeat: no-repeat;
   background-size: 1.5rem;
-  background-position: right top;
-
+  background-position: right center;
   transition: width 0.5s, height 0.5s, background-color 1s, transform 0.5s;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .main_bayan_lines_pic {
@@ -76,16 +84,33 @@ html {
 .main_bayan_lines__mem:hover {
   background-image: var(--cross);
   height: 25rem;
-  background-color:rgb(237, 234, 234);
-  --size: 90%; 
+  --size: 90%;
+  background-position: right top;
 }
 
-.main_bayan_lines__mem:active {
+
+.main_bayan_lines__mem input:checked ~ .main_bayan_lines__mem {
   background-image: var(--cross);
-  /* height: 21rem; */
-  background-color:rgb(237, 234, 234);
+  background-color: #2196F3;
+  height: 25rem;
+  --size: 90%;
 }
 
+
+input[type="radio"] {
+  /* убираем индикаторы radio button */
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+}
+
+
+
+
+
+
+/* на этом всё, ниже ковыряем вёрстку под разные экраны:)  */
 
 @media only screen and (max-width: 819px) {
 
@@ -94,10 +119,10 @@ html {
   }
 
   .main_bayan_lines__mem {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .main_title__header {
-    font-size: 1rem;
+    font-size: 2.5rem;
   }
 }
