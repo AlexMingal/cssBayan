@@ -61,7 +61,6 @@
 }
 
 .main_bayan_lines_pic {
-  /* width: var(--size); */
   height: var(--size);
   margin: 0 auto;
 }
@@ -72,7 +71,7 @@
 
 .main_bayan_lines__mem:hover {
   background-image: var(--cross);
-  height: 20rem;
+  height: 25rem;
   background-color:rgb(237, 234, 234);
   --size: 90%; 
 }
@@ -81,4 +80,20 @@
   background-image: var(--cross);
   height: 21rem;
   background-color:rgb(237, 234, 234);
+}
+
+
+@media only screen and (max-width: 819px) {
+
+  .main {
+    width: 90vw;
+  }
+
+  .main_bayan_lines__mem {
+    font-size: 1.5rem;
+  }
+
+  .main_title__header {
+    font-size: 1rem;
+  }
 }
