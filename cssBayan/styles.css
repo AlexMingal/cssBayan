@@ -93,22 +93,33 @@ html {
   background-position: right top;
 }
 
+/* 
 
-.main_bayan_lines__mem input:checked ~ .main_bayan_lines__mem {
-  /* background-image: var(--cross);
-  background-color: #2196F3; */
+.bayan_input:checked ~ .main_bayan_lines__mem {
+  background-image: var(--cross);
+  background-color: #2196F3;
   height: 25rem;
   --size: 90%;
 }
+ */
+
+.div_pic {
+  display: none;
+  max-height: 20rem;
+}
+
+.bayan_input:checked + .div_pic {
+  display: block;
+}
 
 
+ 
 input[type="radio"] {
-  /* убираем индикаторы radio button */
   -webkit-appearance: none;
   appearance: none;
   background-color: #fff;
   margin: 0;
-}
+} 
 
 
 
@@ -130,4 +141,26 @@ input[type="radio"] {
   .main_title__header {
     font-size: 2.5rem;
   }
+}
+
+
+
+
+
+
+.faq {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.faq-item {
+  border: 1px solid red;
+}
+
+.main_bayan_lines_pic {
+  display: none;
+}
+
+.faq-input:checked + .main_bayan_lines_pic {
+  display: block;
 }
