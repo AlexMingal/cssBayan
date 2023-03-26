@@ -1,8 +1,1 @@
-var name = 'John';
-function printName() {
-  console.log(name);
-  var name = 'Peter';
-  console.log(name);
-}
-
-printName();
+console.log(0 || 1 && 2 || 3)
